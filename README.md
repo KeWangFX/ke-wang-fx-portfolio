@@ -63,6 +63,7 @@ If China accessibility matters, keep using direct MP4 or HLS on your own domain 
 
 - GitHub repo: `https://github.com/KeWangFX/ke-wang-fx-portfolio`
 - Cloudflare Pages site: `https://ke-wang-fx-portfolio.pages.dev`
+- GitHub Actions now builds and deploys the site to Cloudflare Pages on every push to `main`
 - Small and medium videos are deployed directly with Pages
 - Oversized videos are served from GitHub Release assets via `site.config.js`
 
