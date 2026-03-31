@@ -1,5 +1,7 @@
 # Ke Wang Portfolio Website
 
+[中文说明](./README.zh-CN.md)
+
 Static portfolio site for Ke Wang, built around direct video playback for showreels, project clips and future tutorial uploads.
 
 ## What is included
@@ -23,14 +25,16 @@ Static portfolio site for Ke Wang, built around direct video playback for showre
 
 ## Local preview
 
-Use any static server. One quick option:
+Use a static server that supports byte-range requests so large videos can seek correctly.
+
+Recommended:
 
 ```powershell
 cd D:\job\codex\keWang_website
-python -m http.server 4173
+npm run preview
 ```
 
-Then open `http://localhost:4173`.
+Then open `http://localhost:4174`.
 
 ## How to add more videos
 
