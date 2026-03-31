@@ -1,0 +1,26 @@
+/assets/posters/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/assets/images/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/assets/graphics/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/assets/documents/*
+  Cache-Control: public, max-age=604800
+
+/styles.css
+  Cache-Control: public, max-age=604800
+
+/script.js
+  Cache-Control: public, max-age=604800
+
+/data.js
+  Cache-Control: public, max-age=604800
+
+/site.config.js
+  Cache-Control: public, max-age=300
+
+/index.html
+  Cache-Control: public, max-age=0, must-revalidate

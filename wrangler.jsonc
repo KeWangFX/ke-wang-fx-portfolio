@@ -1,0 +1,15 @@
+{
+  "name": "ke-wang-fx-portfolio",
+  "pages_build_output_dir": "./cloudflare-release",
+  "compatibility_date": "2026-03-19",
+  "d1_databases": [
+    {
+      "binding": "ke_wang_portfolio_analytics",
+      "database_name": "ke-wang-portfolio-analytics",
+      "database_id": "b7d63a71-7afd-4a0f-b6b0-791fa47194bc"
+    }
+  ],
+  "placement": {
+    "mode": "smart"
+  }
+}

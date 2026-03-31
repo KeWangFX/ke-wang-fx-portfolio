@@ -1,0 +1,132 @@
+{
+  "r2": {
+    "bucketSuggestion": "ke-wang-site-assets",
+    "publicAssets": [
+      {
+        "localPath": "assets/documents/ke-wang-resume.pdf",
+        "suggestedKey": "documents/ke-wang-resume.pdf",
+        "notes": "Optional: serve the resume from R2."
+      },
+      {
+        "localPath": "assets/posters/apple-watch-myshots.jpg",
+        "suggestedKey": "backgrounds/apple-watch-myshots.jpg",
+        "notes": "Suggested background image for the new site color scheme."
+      }
+    ]
+  },
+  "stream": {
+    "customerCode": "<your-cloudflare-stream-customer-code>",
+    "videos": [
+      {
+        "contentId": "showreel-2024",
+        "localPath": "assets/videos/ke-wang-showreel-2024.mp4",
+        "replacePath": "assets/videos/ke-wang-showreel-2024.mp4"
+      },
+      {
+        "contentId": "nautilus-overview",
+        "localPath": "assets/videos/nautilus-cavern-overview.mp4",
+        "replacePath": "assets/videos/nautilus-cavern-overview.mp4"
+      },
+      {
+        "contentId": "nautilus-open-water",
+        "localPath": "assets/videos/nautilus-open-water-pass.mp4",
+        "replacePath": "assets/videos/nautilus-open-water-pass.mp4"
+      },
+      {
+        "contentId": "nautilus-interior-surge",
+        "localPath": "assets/videos/nautilus-interior-surge.mp4",
+        "replacePath": "assets/videos/nautilus-interior-surge.mp4"
+      },
+      {
+        "contentId": "nautilus-cave-waterfall",
+        "localPath": "assets/videos/nautilus-cave-waterfall.mp4",
+        "replacePath": "assets/videos/nautilus-cave-waterfall.mp4"
+      },
+      {
+        "contentId": "nautilus-viewport-impact",
+        "localPath": "assets/videos/nautilus-viewport-impact.mp4",
+        "replacePath": "assets/videos/nautilus-viewport-impact.mp4"
+      },
+      {
+        "contentId": "nautilus-whitewater",
+        "localPath": "assets/videos/nautilus-whitewater-crossing.mp4",
+        "replacePath": "assets/videos/nautilus-whitewater-crossing.mp4"
+      },
+      {
+        "contentId": "apple-watch-myshots",
+        "localPath": "assets/videos/apple-watch-myshots.mp4",
+        "replacePath": "assets/videos/apple-watch-myshots.mp4"
+      },
+      {
+        "contentId": "atlantic-oceanfx-v003",
+        "localPath": "assets/videos/atlantic-oceanfx-v003.mp4",
+        "replacePath": "assets/videos/atlantic-oceanfx-v003.mp4"
+      },
+      {
+        "contentId": "atlantic-oceanfx-v005",
+        "localPath": "assets/videos/atlantic-oceanfx-v005-mid.mp4",
+        "replacePath": "assets/videos/atlantic-oceanfx-v005-mid.mp4"
+      },
+      {
+        "contentId": "cva-shot-011",
+        "localPath": "assets/videos/cva-shot-011.mp4",
+        "replacePath": "assets/videos/cva-shot-011.mp4"
+      },
+      {
+        "contentId": "cva-shot-142",
+        "localPath": "assets/videos/cva-shot-142.mp4",
+        "replacePath": "assets/videos/cva-shot-142.mp4"
+      },
+      {
+        "contentId": "cva-sparks",
+        "localPath": "assets/videos/cva-sparks.mp4",
+        "replacePath": "assets/videos/cva-sparks.mp4"
+      },
+      {
+        "contentId": "bodies-preview",
+        "localPath": "assets/videos/bodies-preview.webm",
+        "replacePath": "assets/videos/bodies-preview.webm"
+      },
+      {
+        "contentId": "bodies-comp-output",
+        "localPath": "assets/videos/bodies-comp-output.mp4",
+        "replacePath": "assets/videos/bodies-comp-output.mp4"
+      },
+      {
+        "contentId": "ps-ii",
+        "localPath": "assets/videos/ps-ii.mp4",
+        "replacePath": "assets/videos/ps-ii.mp4"
+      },
+      {
+        "contentId": "the-rig",
+        "localPath": "assets/videos/the-rig.mp4",
+        "replacePath": "assets/videos/the-rig.mp4"
+      },
+      {
+        "contentId": "tutorial-flip-river-waterfalls",
+        "localPath": "assets/videos/tutorial-flip-river-waterfalls.mp4",
+        "replacePath": "assets/videos/tutorial-flip-river-waterfalls.mp4"
+      },
+      {
+        "contentId": "tutorial-prepare-collision-geometry",
+        "localPath": "assets/videos/tutorial-prepare-collision-geometry.mp4",
+        "replacePath": "assets/videos/tutorial-prepare-collision-geometry.mp4"
+      },
+      {
+        "contentId": "tutorial-waterfalls",
+        "localPath": "assets/videos/tutorial-waterfalls.mp4",
+        "replacePath": "assets/videos/tutorial-waterfalls.mp4"
+      },
+      {
+        "contentId": "anna-with-dad",
+        "localPath": "assets/videos/anna-with-dad-h264.mp4",
+        "replacePath": "assets/videos/anna-with-dad-h264.mp4"
+      },
+      {
+        "contentId": "anna-first-smile",
+        "localPath": "assets/videos/anna-first-smile.mp4",
+        "replacePath": "assets/videos/anna-first-smile.mp4"
+      }
+    ]
+  }
+}
