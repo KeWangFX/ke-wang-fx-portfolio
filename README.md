@@ -59,7 +59,18 @@ Example clip entry:
 
 If China accessibility matters, keep using direct MP4 or HLS on your own domain or CDN rather than relying on blocked third-party video embeds. This site was intentionally built without external font or video dependencies for that reason.
 
-The current showreel file is the full-quality source, so for production deployment you may also want a lighter web encode or HLS stream while keeping the original as a downloadable master.
+## Current publishing setup
+
+- GitHub repo: `https://github.com/KeWangFX/ke-wang-fx-portfolio`
+- Cloudflare Pages site: `https://ke-wang-fx-portfolio.pages.dev`
+- Small and medium videos are deployed directly with Pages
+- Oversized videos are served from GitHub Release assets via `site.config.js`
+
+Current external media release:
+
+- `https://github.com/KeWangFX/ke-wang-fx-portfolio/releases/tag/media-assets-v1`
+
+This keeps the repository pushable while avoiding the Pages 25 MB upload limit and the GitHub 100 MB git object limit.
 
 ## Content assumptions used
 
