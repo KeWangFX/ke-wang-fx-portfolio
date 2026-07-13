@@ -976,11 +976,24 @@ h3 {
 }
 
 .video-stage video,
+.video-stage iframe,
 .modal-video {
   width: 100%;
   background: #000;
   border-radius: calc(var(--radius-lg) - 6px);
   border: 1px solid rgba(20, 17, 15, 0.08);
+}
+
+.embedded-stage,
+.embed-frame {
+  display: block;
+}
+
+.embed-frame iframe {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  min-height: 420px;
 }
 
 .player-shell {

@@ -1,14 +1,14 @@
 window.portfolioData = {
   profile: {
     name: "Ke Wang",
-    title: "Senior FX Artist",
-    currentRole: "Currently at DNEG, London",
+    title: "Senior FX TD",
+    currentRole: "Senior FX TD at DNEG, London",
     tagline:
-      "Senior FX Artist in London focused on water, pyro and cinematic simulation for film, episodic and commercial projects.",
+      "Senior FX TD in London focused on large-scale water, pyro and USD-driven cinematic simulation for feature, episodic and commercial work.",
     intro:
-      "Ke Wang is a London-based Senior FX Artist at DNEG. The work centers on large-scale simulation, shot clarity and production-ready Houdini workflows.",
+      "Ke Wang is a London-based Senior FX TD at DNEG with 9+ years across feature film, episodic and commercials. The work centers on large-scale ocean, water, pyro, RBD and production-ready Houdini delivery.",
     detail:
-      "Alongside studio delivery, he develops practical tutorials on FLIP, waterfalls, collision preparation and production-minded FX workflows.",
+      "Alongside studio FX delivery, he develops practical Houdini tutorials and brings recent AI production experience in ComfyUI fine-tuning, cinematic image generation and AI video workflows.",
     location: "London, United Kingdom",
     email: "keke19870699@gmail.com",
     linkedin: "https://www.linkedin.com/in/ke-wang-4b9508194/",
@@ -29,80 +29,83 @@ window.portfolioData = {
   highlights: [
     {
       title: "Current role",
-      body: "Senior FX Artist at DNEG in London, focused on production-ready water, pyro and environment work."
+      body: "Senior FX TD at DNEG in London, focused on feature-scale water, pyro and environment work."
     },
     {
-      title: "Professional profile",
-      body: "LinkedIn is the concise profile. This site expands into reel, shots and tutorials."
+      title: "Reel-first portfolio",
+      body: "The site is structured around a recruiter-facing reel, selected shots, production credits and tutorials."
     },
     {
-      title: "Teaching",
-      body: "Long-form Houdini tutorials and artist-facing breakdowns sit beside the studio work."
+      title: "Technical range",
+      body: "Ocean, whitewater, pyro, smoke, RBD, Vellum, MPM and USD / Solaris sit in the same production profile."
     },
     {
-      title: "Personal chapter",
-      body: "A small family page for Anna Wang sits after the professional portfolio."
+      title: "AI production layer",
+      body: "Recent work extends into ComfyUI workflow design, model fine-tuning and cinematic AI image / video development."
     }
   ],
   stats: [
-    { label: "Experience", value: "5+ years" },
+    { label: "Experience", value: "9+ years" },
     { label: "Current studio", value: "DNEG" },
-    { label: "Core toolset", value: "Houdini / Solaris / USD / Nuke" },
-    { label: "Portfolio focus", value: "Water FX, Pyro, Tutorials, Shot Work" }
+    { label: "Core toolset", value: "Houdini / Solaris / USD / Nuke / ComfyUI" },
+    { label: "Portfolio focus", value: "Water FX, Pyro, USD, Tutorials, AI Workflows" }
   ],
   specialties: [
-    "Large-scale water FX",
-    "Ocean surfaces, whitewater and waterfall interaction",
-    "Pyro, sparks, destruction and atmospheric passes",
-    "Shot collaboration with lighting and comp",
-    "Commercial, feature and episodic delivery",
-    "Tutorials, breakdowns and artist-facing education"
+    "Large-scale ocean, FLIP and whitewater FX",
+    "Pyro, smoke, fire and atmospheric passes",
+    "RBD, Vellum and MPM simulation",
+    "USD / Solaris scene and shot workflows",
+    "Lighting, rendering and Nuke integration",
+    "Feature, episodic and commercial delivery",
+    "FX supervision and artist-facing review",
+    "ComfyUI and cinematic AI workflows"
   ],
   focusAreas: [
     {
-      title: "Feature and episodic simulation",
+      title: "Feature-scale simulation",
       body:
-        "From storm decks to cavern waterfalls, the work is built around cinematic reads and shot continuity."
+        "From 50+ ocean shots on Ponniyin Selvan: II to storm decks, waterfalls and destruction beats, the work is built for film-scale continuity."
     },
     {
-      title: "Commercial polish",
+      title: "Shot-driven delivery",
       body:
-        "Commercial work demands clean silhouettes, fast iteration and premium-looking water behavior."
+        "The emphasis stays on readable motion, efficient iteration and final-frame presentation rather than only raw simulation complexity."
+    },
+    {
+      title: "Commercial and AI production",
+      body:
+        "Commercial water work and recent AI image / video production add faster look-development and broader visual direction capability."
     },
     {
       title: "Artist education",
       body:
-        "Long-form tutorials and production breakdowns support teaching, mentoring and channel growth."
-    },
-    {
-      title: "A personal chapter",
-      body:
-        "A small family page for Anna Wang stays separate from the professional body of work."
+        "Long-form Houdini tutorials and breakdown-oriented examples make the site useful to both recruiters and working artists."
     }
   ],
   profilePanels: [
     {
       title: "What recruiters should see first",
       body:
-        "A clear track record in water FX, feature shots, episodic environments and commercial polish."
+        "A Senior FX TD profile with production credits across feature film, episodic, commercials and recent FX supervision."
     },
     {
       title: "What artists can learn here",
       body:
-        "Tutorials on FLIP, waterfalls and collision preparation make the site useful as both portfolio and learning base."
+        "Tutorials on FLIP, waterfalls and collision preparation sit next to real production work instead of separate demo material."
     }
   ],
   featuredVideo: {
-    id: "showreel-2024",
-    title: "FX Showreel 2024",
+    id: "showreel-2026",
+    kind: "youtube",
+    title: "Latest FX Showreel",
     label: "Featured Reel",
     description:
-      "A 2024 reel covering water, environment FX and production-ready simulation across feature, episodic and commercial work.",
+      "Latest recruiter-facing reel covering water, environment FX, pyro and production-ready simulation across feature, episodic and commercial work.",
     project: "Showreel",
-    specs: "71s - 1080p - Direct MP4 playback",
+    specs: "YouTube reel - latest update",
     poster: "assets/posters/ke-wang-showreel-2024.jpg",
-    video: "assets/videos/ke-wang-showreel-2024.mp4",
-    mimeType: "video/mp4",
+    watchUrl: "https://youtu.be/OrwAaQ6LOTo?si=oeWTSaPZ1XmLcHAx",
+    embedUrl: "https://www.youtube.com/embed/OrwAaQ6LOTo?rel=0",
     filters: ["Showreel", "Water FX", "Film & Episodic"]
   },
   work: [
@@ -225,6 +228,7 @@ window.portfolioData = {
     },
     {
       id: "cva-shot-011",
+      hidden: true,
       title: "Coyote vs Acme | Shot 011",
       subtitle: "Feature shot work",
       description:
@@ -238,6 +242,7 @@ window.portfolioData = {
     },
     {
       id: "cva-shot-142",
+      hidden: true,
       title: "Coyote vs Acme | Shot 142",
       subtitle: "Secondary feature clip",
       description:
@@ -251,6 +256,7 @@ window.portfolioData = {
     },
     {
       id: "cva-sparks",
+      hidden: true,
       title: "Coyote vs Acme | Sparks",
       subtitle: "Pyro detail pass",
       description:
@@ -355,7 +361,7 @@ window.portfolioData = {
   ],
   tutorialNotes: [
     "Long-form Houdini tutorials are hosted directly inside the site structure.",
-    "The public YouTube channel can act as the outward-facing archive when needed.",
+    "The public YouTube channel remains the outward-facing archive for reels and tutorial visibility.",
     "Tutorial uploads are separated from the portfolio so recruiters and learners can browse differently."
   ],
   family: {
@@ -403,88 +409,127 @@ window.portfolioData = {
   },
   experience: [
     {
+      role: "Senior FX TD",
+      company: "DNEG",
+      type: "Full-time",
+      period: "May 2026 - Present",
+      location: "London, UK",
+      summary:
+        "Senior-level FX delivery inside DNEG's feature-film production environment."
+    },
+    {
       role: "AI Artist",
       company: "Atlantic Studios",
       type: "Freelance",
-      period: "Feb 2026 - Present",
-      location: "London Area, United Kingdom - On-site",
+      period: "Feb 2026 - May 2026",
+      location: "London, UK",
       summary:
-        "AI specialist, AI Director and visual AI advisor developing image-led creative direction, look development and tool-driven visual workflows.",
-      tags: ["ComfyUI", "WeavyAI", "AI Direction", "Visual AI"]
+        "Created cinematic AI imagery and video with emphasis on prompt development, visual consistency and production-ready workflows.",
+      tags: ["ComfyUI", "Fine-tuning", "Weavy AI", "Seedance 2.0", "Nano Banana Pro"]
     },
     {
-      role: "Senior FX Artist",
-      company: "DNEG",
+      role: "FX Supervisor",
+      company: "VcreateFX World Pvt. Ltd.",
       type: "Full-time",
-      period: "Current",
-      location: "London, United Kingdom",
+      period: "Jul 2025 - Mar 2026",
+      location: "Mumbai, India",
       summary:
-        "Based in London and focused on high-end FX delivery for large-scale production work."
+        "Credited FX Supervisor on Nagabandham, contributing to FX delivery and shot supervision."
+    },
+    {
+      role: "3D Generalist",
+      company: "StudioB",
+      type: "Freelance",
+      period: "Jun 2025",
+      location: "",
+      summary:
+        "Short-term 3D generalist engagement."
     },
     {
       role: "FX Artist",
       company: "Atlantic Productions",
       type: "Freelance",
       period: "Nov 2024 - Dec 2024",
-      location: "Greater London, England, United Kingdom - On-site",
+      location: "London, UK",
       summary:
-        "Ocean splash, whitewater and foam simulation work for production shots."
+        "Produced ocean splash, whitewater and foam simulations."
     },
     {
       role: "FX TD",
       company: "Black Kite Studios",
       type: "Freelance",
       period: "Aug 2024 - Sep 2024",
-      location: "United Kingdom",
+      location: "London, UK",
       summary:
-        "Water FX for a New Apple Watch advert including ocean and wave splash simulation."
+        "Delivered water FX for the Apple Watch Series 10 campaign, from large ocean waves to slow-motion small-scale water."
     },
     {
       role: "FX Artist",
       company: "Axio",
       type: "Freelance",
       period: "Apr 2024 - Jul 2024",
-      location: "United Kingdom",
+      location: "London, UK",
       summary:
-        "Created water drop simulation for L'Oreal Paris and pyro fire and smoke elements for film work."
+        "Created water droplet simulation for L'Oreal Professionnel Paris and pyro, smoke and fire work for The Burning City."
     },
     {
       role: "FX Artist",
       company: "Pixl Visual Effects",
       type: "Full-time",
       period: "Jul 2022 - Oct 2023",
-      location: "India / Remote collaboration",
+      location: "London, UK",
       summary:
-        "Worked on Ponniyin Selvan II and Noah's Ark with a focus on ocean water and environmental FX."
+        "Delivered ocean and water simulation across 50+ shots on Ponniyin Selvan: II and additional water FX on Noah's Ark."
     },
     {
       role: "Junior FX Artist",
       company: "Misc Studios",
       type: "Full-time",
       period: "Nov 2021 - Jul 2023",
-      location: "United Kingdom",
+      location: "London, UK",
       summary:
-        "Delivered ocean FX, fog, dust, air explosions, pyro, smoke and RBD work across The Rig, Nautilus, Bodies and Coyote vs Acme."
+        "Delivered ocean FX, smoke, environmental fog, dust, waterfalls, air explosions, pyro, Vellum and RBD across The Rig, Nautilus and Bodies."
     },
     {
-      role: "Trainee",
+      role: "FX Trainee - Academy @ The Focus",
       company: "Technicolor Creative Studios",
       type: "Training",
       period: "Oct 2021 - Dec 2021",
-      location: "United Kingdom",
+      location: "London, UK",
       summary:
-        "Completed focused VFX and FX training immediately after postgraduate study in digital effects."
+        "Completed the FX for VFX programme."
+    },
+    {
+      role: "Visual Effects Artist / Animation Director / Lecturer",
+      company: "Jilin Animation Institute",
+      type: "Full-time",
+      period: "Apr 2016 - Oct 2019",
+      location: "Changchun, China",
+      summary:
+        "Directed, lit and composited the animated short Last One, and served as art director, director and screenwriter on The Prince."
+    },
+    {
+      role: "FX TD",
+      company: "Original Force, Ltd.",
+      type: "Full-time",
+      period: "Jun 2014 - Apr 2015",
+      location: "Nanjing, China",
+      summary:
+        "Built shot-based clouds, dust, debris, smoke, particles and atmospheric FX on Bilal: A New Breed of Hero."
     }
   ],
   credits: [
     "DNEG",
+    "Nagabandham",
     "Nautilus",
     "The Rig",
     "Bodies",
-    "Coyote vs Acme",
+    "The Burning City",
     "Ponniyin Selvan II",
+    "Noah's Ark",
+    "Bilal: A New Breed of Hero",
     "Atlantic Productions",
-    "Apple Watch campaign",
+    "Apple Watch Series 10",
     "YouTube tutorials"
   ]
 };

@@ -146,13 +146,18 @@ function applyTheme() {
   root.style.setProperty("--site-background-image", `url("${assetUrl(backgroundImage)}")`);
 }
 
+function getVisibleWorkItems() {
+  return portfolioData.work.filter((item) => !item.hidden);
+}
+
 function renderHeroMedia() {
   const grid = q("[data-hero-media-grid]");
   if (!grid) return;
 
-  const selectedWork = portfolioData.work.find((item) =>
+  const workItems = getVisibleWorkItems();
+  const selectedWork = workItems.find((item) =>
     item.filters.includes("Water FX")
-  ) || portfolioData.work[0];
+  ) || workItems[0];
   const tutorial = portfolioData.tutorialVideos[0];
   const stageImage = q("[data-hero-stage-image]");
 
@@ -182,26 +187,98 @@ function renderHeroMedia() {
       <p class="eyebrow">Current focus</p>
       <h3>${portfolioData.profile.currentRole}</h3>
       <p>
-        Recruiter-ready showreel, direct MP4 playback, tutorial library and
-        project clips built for quick review.
+        Recruiter-facing reel, selected production clips, tutorial library and
+        current career positioning built for quick review.
       </p>
     </article>
   `;
 }
 
 function renderShowreelPlayer() {
-  const video = q("[data-showreel-video]");
-  const source = q("[data-showreel-source]");
+  const host = q("[data-showreel-stage]");
+  const item = portfolioData.featuredVideo;
+  if (!host || !item) return;
 
-  if (!video || !source) return;
+  if (item.kind === "youtube") {
+    host.innerHTML = `
+      <div class="embedded-stage">
+        <div class="embed-frame">
+          <iframe
+            src="${item.embedUrl}"
+            title="${escapeHtml(item.title)}"
+            loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    `;
+    return;
+  }
 
-  video.poster = assetUrl(portfolioData.featuredVideo.poster);
-  source.src = assetUrl(portfolioData.featuredVideo.video);
-  source.type = assetMimeType(
-    portfolioData.featuredVideo.video,
-    portfolioData.featuredVideo.mimeType || "video/mp4"
-  );
-  video.load();
+  host.innerHTML = `
+    <div class="player-shell" data-player>
+      <div class="player-frame">
+        <video
+          class="player-video"
+          data-player-video
+          data-showreel-video
+          playsinline
+          preload="metadata"
+          poster="${assetUrl(item.poster)}"
+        >
+          <source
+            data-showreel-source
+            src="${assetUrl(item.video)}"
+            type="${assetMimeType(item.video, item.mimeType || "video/mp4")}"
+          />
+          Your browser does not support HTML5 video playback.
+        </video>
+        <button
+          class="player-overlay-button"
+          type="button"
+          data-player-toggle
+          aria-label="Play showreel"
+        >
+          Play reel
+        </button>
+      </div>
+      <div class="player-controls">
+        <div class="player-buttons">
+          <button class="player-button" type="button" data-player-toggle>
+            Play
+          </button>
+          <button class="player-button" type="button" data-player-skip="-10">
+            -10s
+          </button>
+          <button class="player-button" type="button" data-player-skip="10">
+            +10s
+          </button>
+          <button class="player-button" type="button" data-player-mute>
+            Mute
+          </button>
+          <button class="player-button" type="button" data-player-fullscreen>
+            Fullscreen
+          </button>
+        </div>
+        <div class="player-timeline">
+          <span class="player-time" data-player-current>0:00</span>
+          <input
+            class="player-scrubber"
+            type="range"
+            min="0"
+            max="1000"
+            step="1"
+            value="0"
+            data-player-scrub
+            aria-label="Seek showreel"
+          />
+          <span class="player-time" data-player-duration>0:00</span>
+        </div>
+      </div>
+    </div>
+  `;
 }
 
 function renderStats() {
@@ -264,6 +341,12 @@ function renderFeatured() {
   setText("[data-featured-description]", item.description);
   setText("[data-featured-specs]", item.specs);
 
+  const watchLink = q("[data-featured-watch-link]");
+  if (watchLink) {
+    watchLink.href = item.watchUrl || assetUrl(item.video);
+    watchLink.textContent = item.kind === "youtube" ? "Watch on YouTube" : "Open in player";
+  }
+
   const filters = q("[data-featured-filters]");
   filters.innerHTML = "";
   item.filters.forEach((filter) => {
@@ -287,7 +370,7 @@ function renderFocusAreas() {
 
 function getFilters() {
   const filterSet = new Set(["All"]);
-  portfolioData.work.forEach((item) => {
+  getVisibleWorkItems().forEach((item) => {
     item.filters.forEach((filter) => filterSet.add(filter));
   });
   return [...filterSet];
@@ -336,7 +419,7 @@ function mediaCardTemplate(item, actionLabel = "Play clip") {
 
 function renderWork() {
   const grid = q("[data-work-grid]");
-  const visibleItems = portfolioData.work.filter(shouldShowItem);
+  const visibleItems = getVisibleWorkItems().filter(shouldShowItem);
   grid.innerHTML = visibleItems.map((item) => mediaCardTemplate(item, "Play clip")).join("");
   bindVideoTriggers();
 }
@@ -535,7 +618,7 @@ function renderCredits() {
 function buildVideoState() {
   state.videos = [
     portfolioData.featuredVideo,
-    ...portfolioData.work,
+    ...getVisibleWorkItems(),
     ...portfolioData.tutorialVideos,
     ...portfolioData.family.videos
   ];
@@ -694,6 +777,11 @@ function bindPlayers() {
 function openVideo(id) {
   const item = findVideoById(id);
   if (!item) return;
+
+  if (item.kind === "youtube" && item.watchUrl) {
+    window.open(item.watchUrl, "_blank", "noopener,noreferrer");
+    return;
+  }
 
   const modal = q("[data-video-modal]");
   const source = q("#video-modal-source");
@@ -963,6 +1051,7 @@ function init() {
   renderExperience();
   renderInsightsOwnerMode();
   renderCredits();
+  buildVideoState();
   bindPlayers();
   bindModalClose();
   bindInsightsRefresh();
